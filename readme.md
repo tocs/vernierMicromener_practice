@@ -1,5 +1,5 @@
 Simple project to practice reading a micrometer with a verier scale.
-- ./images
+- ./svg
 - ./python
 - ./readme.txt
 

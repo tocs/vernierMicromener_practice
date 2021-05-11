@@ -16,7 +16,6 @@ def micrometerReading(length,
     def sleeveStuff(): #, sleeveYZero):
         sleevePoint = [sleevePosition(length), sleeveYZero]
         pic = ImageDraw.Draw(sleeveImg)
-        print sleevePoint
         pic.ellipse([sleevePoint[0] - 10, sleevePoint[1] - 10, sleevePoint[0] + 10, sleevePoint[1] + 10], fill = (255,0,0))
         del pic
         return(sleevePoint)
@@ -37,7 +36,6 @@ def micrometerReading(length,
                              136 + int(sleeveYZero - thimblePoint[1]) - thimbleImg.size[1]))
         # if thimble image does not fill bottom of image past copy below
         if thimbleImg.size[1] + int(sleeveYZero - thimblePoint[1]) < sleeveImg.size[1]:
-            print "pasting below"
             sleeveImg.paste(thimbleImg,
                             (int(sleevePoint[0]),
                              int(sleeveYZero - thimblePoint[1]) + thimbleImg.size[1] - 136))
